@@ -47,7 +47,10 @@ jobs:
             docker build -t $IMAGE_NAME:v1 .
             docker tag $IMAGE_NAME:v1 $ECR_REGISTRY/$IMAGE_NAME:v1
             docker push $ECR_REGISTRY/$IMAGE_NAME:v1
-            
+      - name: Run Docker container for test
+        run: |
+          docker run -d -p 8080:80 969759464709.dkr.ecr.eu-north-1.amazonaws.com/my-website:v1
+    
       - name: Run post-deployment checks
         run: |
             sleep 10
