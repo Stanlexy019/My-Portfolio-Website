@@ -50,8 +50,8 @@ jobs:
           
       - name: Pull and run Docker image
         run: |
-            docker pull 969759464709.dkr.ecr.eu-north-1.amazonaws.com/portfolio-image:v1
-            docker run --rm -d -p 8080:80 969759464709.dkr.ecr.eu-north-1.amazonaws.com/porfolio-image:v1
+            docker pull 969759464709.dkr.ecr.eu-north-1.amazonaws.com/my-website
+            docker run --rm -d -p 8080:80 969759464709.dkr.ecr.eu-north-1.amazonaws.com/my-website
 
       - name: Run post-deployment checks
         run: |
