@@ -4,7 +4,7 @@ This project demonstrates how I deployed my **static portfolio website** using *
 
 ---
 
-## 📘 Overview
+##  Overview
 
 This project automates the entire process of deploying my portfolio website to the cloud using modern DevOps practices.
 
@@ -18,7 +18,7 @@ Each time I push updates to the `main` branch, GitHub Actions automatically:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **HTML, CSS, JS** → Frontend (Portfolio Website)
 - **Docker** → Containerization
@@ -30,7 +30,7 @@ Each time I push updates to the `main` branch, GitHub Actions automatically:
 
 ---
 
-## ⚙️ CI/CD Workflow Steps
+##  CI/CD Workflow Steps
 
 # Configure AWS Credentials
 GitHub Actions authenticates into AWS using secure credentials stored as **GitHub Secrets**:
@@ -41,5 +41,5 @@ GitHub Actions authenticates into AWS using secure credentials stored as **GitHu
 A new Docker image is built and tagged using this command inside the workflow:
 ```bash
 docker build -t my-website .
-docker tag my-website:latest 969759464709.dkr.ecr.eu-north-1.amazonaws.com/my-website:v1
+docker tag my-website:latest 969759464709.dkr.ecr.eu-north-1.amazonaws.com/my-website:
 docker push 969759464709.dkr.ecr.eu-north-1.amazonaws.com/my-website
