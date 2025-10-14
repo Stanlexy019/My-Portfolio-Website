@@ -1,3 +1,10 @@
-.github
+# Exclude YAML workflow and compose files so they are not sent in the Docker build context
+node_modules
+.vscode
+*.log
+.DS_Store
+Thumbs.db
 .git
+.github
 *.yml
+*.yaml
