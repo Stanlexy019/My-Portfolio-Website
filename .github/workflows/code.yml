@@ -37,10 +37,11 @@ jobs:
       - name: Build, Tag, and Push Docker image
         env:
             ECR_REGISTRY: 969759464709.dkr.ecr.eu-north-1.amazonaws.com
+            ECR_REPOSITORY: my-website
             IMAGE_NAME: my-portfolio
         run: |
-            docker build -t $IMAGE_NAME .
-            docker tag $IMAGE_NAME:latest $ECR_REGISTRY/$IMAGE_NAME:v1
+            docker build -t $IMAGE_NAME:v1 .
+            docker tag $IMAGE_NAME:v1 $ECR_REGISTRY/$IMAGE_NAME:v1
             docker push $ECR_REGISTRY/$IMAGE_NAME:v1
           
       - name: Pull and run Docker image
