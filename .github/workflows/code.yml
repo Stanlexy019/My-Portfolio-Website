@@ -42,7 +42,7 @@ jobs:
         env:
             ECR_REGISTRY: 969759464709.dkr.ecr.eu-north-1.amazonaws.com
             ECR_REPOSITORY: my-website
-            IMAGE_NAME: portfolio-image
+            IMAGE_NAME: my-website
         run: |
             docker build -t $IMAGE_NAME:v1 .
             docker tag $IMAGE_NAME:v1 $ECR_REGISTRY/$IMAGE_NAME:v1
